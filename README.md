@@ -6,3 +6,4 @@
 - [ ] doesExist?
 - [ ] Update
 - [ ] Delete
+- [ ] DocOpt
