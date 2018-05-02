@@ -133,6 +133,53 @@ class HU:
                 f.write(self.gpg.export_keys(fingerprint, armor=False))
         print("Wrote %d keys to directory '%s'" % (len(fps), self.output_dir))
 
+        
+class WKD:
+    def __init__(self, debug, keyring, output_dir):
+        try:
+            os.makedirs(output_dir, exist_ok=args.exist_ok)
+        except FileExistsError:
+            print("Output directory " + output_dir
+                  + " already exists, exiting!", file=sys.stderr)
+            sys.exit(1)
+
+        if debug:
+            gnupg.logger.setLevel(logging.DEBUG)
+            gnupg.logger.addHandler(logging.StreamHandler())
+
+        self.debug = debug
+        self.gpg = gnupg.GPG(keyring=keyring)
+        self.output_dir = output_dir
+    
+    def add():
+        pass
+    
+    def update():
+        pass
+    
+    def delete():
+        pass
+    
+    
+    def doesKeyExist(email):
+        # create fingerprint
+        if '@' not in email:
+            return False
+        local, domain = addr.split("@", 1)
+        mail_domain = mail_domain.lower()
+        domain = domain.lower()
+        
+        if domain != mail_domain:
+            return False
+        
+        fp = localpart2zbase32(local)
+        
+        # check if key-file exists
+        key_path = os.path.join(self.output_dir, fp)
+        if os.path.is_file(key_path):
+            return True
+        return False
+
 
 if __name__ == "__main__":
     args = getargs()
