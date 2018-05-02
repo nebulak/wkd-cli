@@ -2,7 +2,7 @@
 
 # TODOs
 
-- [ ] Create
+- [ ] Add
 - [x] doesExist?
 - [ ] Update
 - [ ] Delete
