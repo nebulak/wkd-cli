@@ -152,6 +152,12 @@ class WKD:
         self.output_dir = output_dir
     
     def add():
+        # //TODO: check if key already exists
+        # //TODO: check if key is valid
+        # //TODO: check if email & domain is valid
+        # //TODO: import to keyring
+        # //TODO: export to output_dir
+        
         pass
     
     def update():
