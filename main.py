@@ -151,9 +151,12 @@ class WKD:
         self.gpg = gnupg.GPG(keyring=keyring)
         self.output_dir = output_dir
     
-    def add():
-        # //TODO: check if key already exists
+    def add(email, b64_key):
+        # check if key already exists
+        if self.doesKeyExist(email):
+            return False
         # //TODO: check if key is valid
+        #       - import to temporary keyring
         # //TODO: check if email & domain is valid
         # //TODO: import to keyring
         # //TODO: export to output_dir
