@@ -3,7 +3,9 @@
 # TODOs
 
 - [ ] Create
-- [ ] doesExist?
+- [x] doesExist?
 - [ ] Update
 - [ ] Delete
 - [ ] DocOpt
+- [ ] ConfigParser
+- [ ] Separate: WKD-Module & WKD-CLI
