@@ -9,3 +9,5 @@
 - [ ] DocOpt
 - [ ] ConfigParser
 - [ ] Separate: WKD-Module & WKD-CLI
+- [ ] enum RC
+- [ ] JSON output
