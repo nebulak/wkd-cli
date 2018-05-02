@@ -1,4 +1,4 @@
-# wkd-do
+# wkd-cli
 
 # TODOs
 
